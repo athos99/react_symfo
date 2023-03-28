@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('react') }}
+{% endblock %}
+{% block javascripts %}
+    <!--java script-->
+    {{ encore_entry_script_tags('react') }}
+{% endblock %}
+
+
+{% block main %}
+    <h2>Test react</h2>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="lift-stuff-app1"></div>
+            <div id="lift-stuff-app2"></div>
+            <div id="lift-stuff-app3"></div>
+            <div id="lift-stuff-app4"></div>
+            <div id="lift-stuff-app5"></div>
+            <div id="lift-stuff-app6"></div>
+            <div id="lift-stuff-app7"></div>
+
+
+        </div>
+    </div>
+{% endblock %}

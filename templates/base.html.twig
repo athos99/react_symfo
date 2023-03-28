@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{% block title %} République et canton de Genève{% endblock %}</title>
+  {% block stylesheets %}
+      {{ encore_entry_link_tags('app') }}
+  {% endblock %}
+  <link rel="icon" type="image/x-icon" href="{{ asset('icon.ico') }}"/>
+</head>
+<body id="{% block body_id %}{% endblock %}">
+{% block header %}
+{% endblock %}
+<div class="container-fluid">
+  {% block body %}
+    <div>
+      {{ include('_flash_messages.html.twig') }}
+    </div>
+    <div>
+      {% block main %}
+          {{ content | default('') }}
+      {% endblock %}
+    </div>
+  {% endblock %}
+</div>
+
+{% block footer %}
+  <footer>
+  </footer>
+{% endblock %}
+
+{% block javascripts %}
+  <!--java script-->
+  {{ encore_entry_script_tags('app') }}
+{% endblock %}
+<!-- Page rendered on {{ 'now'|format_datetime('long', 'long', '', 'UTC') }} -->
+</body>
+</html>

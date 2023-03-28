@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('react_game') }}
+{% endblock %}
+{% block javascripts %}
+    <!--java script-->
+    {{ encore_entry_script_tags('react_game') }}
+{% endblock %}
+
+
+{% block main %}
+    <h2>React</h2>
+
+    <div class="row">
+        <div class="col-12" id="react-game">
+        </div>
+    </div>
+{% endblock %}

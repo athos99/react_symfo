@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+  {% block stylesheets %}
+      {{ encore_entry_link_tags('stimulus') }}
+  {% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('stimulus') }}
+{% endblock %}
+
+{% block main %}
+
+    <div class="row">
+        <div class="col-12">
+            <h4>hello</h4>
+
+            <div class="row" {{ stimulus_controller('markdown') }}>
+                <div class="col-5"><textarea class="form-control" {{ stimulus_target('markdown', 'input') }}>
+                        Writing JavaScript is a **dream** with Stimulus 🤩</textarea>
+                </div>
+                <div class="col-2">
+
+                    <button class="btn btn-sm btn-dark"{{ stimulus_action('markdown', 'render') }}>
+                        Render Markdown<i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="col-5" {{ stimulus_target('markdown', 'preview') }} ></div>
+            </div>
+
+        </div>
+        <div class="col-12" {{ stimulus_controller('hello') }}>
+
+        </div>
+
+        <div class="col-12">
+            <div {{ react_component('MyComponent', { 'fullName': 'toto' }) }}></div>
+        </div>
+    </div>
+{% endblock %}
