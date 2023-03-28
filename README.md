@@ -2,19 +2,19 @@ Installation
 
 
 console docker:
-cd www/symfony
-composer create-project symfony/skeleton ux
-cd restapi
-composer require webapp
-composer require symfony/apache-pack
-composer require symfony/maker-bundle --dev
-composer require migrations
-composer require symfony/string
+* cd www/symfony
+* composer create-project symfony/skeleton ux
+* cd restapi
+* composer require webapp
+* composer require symfony/apache-pack
+* composer require symfony/maker-bundle --dev
+* composer require migrations
+* composer require symfony/string
 
 
-composer require symfony/ux-react
-composer reuire symfony/webpack-encore-bundle
-composer require --dev orm-fixtures
+* composer require symfony/ux-react
+* composer reuire symfony/webpack-encore-bundle
+* composer require --dev orm-fixtures
 
 
 Browser
