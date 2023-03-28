@@ -4,6 +4,5 @@
 /var/log/
 /vendor/
 /composer.lock
-
 .idea/
 /bin/
